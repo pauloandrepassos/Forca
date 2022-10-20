@@ -10,5 +10,7 @@ def nome_animal():
     return random.choice(animal)
 
 def nome_objeto():
-    objeto = ['apontador', 'lapis', 'prego']
+    objeto = ['abajur', 'agulha','alfinete', 'algema', 'alicate', 'almofada', 'ampulheta', 'anel', 'antena', 'anzol', 
+              'apagador', 'apito', 'apontador', 'aspirador', 'banco', 'bandeira', 'bengala', 'bola', 'boneca', 'borracha',
+              'brinco', 'cadeado', 'lapis', 'prego']
     return random.choice(objeto)
