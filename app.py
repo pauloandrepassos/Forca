@@ -5,14 +5,15 @@ letras = []
 
 tema = input('Escolha o tema:\n1 - Animais\n2 - Objetos\nEscolha: ')
 
+palavra = ""
 if tema == "1":
     palavra = nomes.nome_animal()
 elif tema == "2":
     palavra = nomes.nome_objeto()
 
-espaços = list('_' * len(palavra))
-saida = ' '.join(espaços)
-#print(saida)
+espacos = list('_' * len(palavra))
+saida = ' '.join(espacos)
+
 tentativas = 6
 tentativasn = 6
 
@@ -27,7 +28,7 @@ print('Qual a palavra?')
 
 time.sleep(1)
 
-while "_" in espaços and tentativas > 0:
+while "_" in espacos and tentativas > 0:
     letra = input('Escolha uma letra: ').lower().strip()
     time.sleep(1)
     if letra in letras:
@@ -37,8 +38,8 @@ while "_" in espaços and tentativas > 0:
     elif letra in palavra:
         while letra in palavra:
             pos = palavra.index(letra)
-            espaços[pos] = letra.upper()
-            saida = ' '.join(espaços)
+            espacos[pos] = letra.upper()
+            saida = ' '.join(espacos)
             palavra = list(palavra)
             palavra[pos] = letra.upper()
             palavra = ''.join(palavra)
@@ -51,8 +52,8 @@ while "_" in espaços and tentativas > 0:
         print('Incorreto! Não há essa letra na palavra!\nTentativas restantes: {}\n{}'.format(tentativas, saida))
         print("=========================================")
     letras.append(letra)    
-    #print('\n')
 
-print('A palavra era {}'.format((palavra).upper()))
+
+print('A palavra era {}'.format(palavra.upper()))
 print("=========================================")
 print("Fim")
